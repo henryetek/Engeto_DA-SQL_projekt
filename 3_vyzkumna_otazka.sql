@@ -39,17 +39,6 @@ HAVING min(YOY_price_food_increase)>0
 ORDER BY YOY_price_food_increase_%
 LIMIT 1; 
 
-/* 
- -- řešení pro zprůměrování meziročního růsta za danou kategorii, vynechání klesajících hodnot a získání nejnižšího průměru za celé porovnatekné období
-SELECT 
-	food_cat, 
-	avg(YOY_price_food_increase)AS avg_increase
-FROM food_percent_increase
-WHERE YOY_price_food_increase >0 
-GROUP BY food_cat
-ORDER BY avg_increase
-LIMIT 1;
-*/
 
 
 
